@@ -1,0 +1,41 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <OutputType>Exe</OutputType>
+        <TargetFramework>net8.0</TargetFramework>
+        <ImplicitUsings>enable</ImplicitUsings>
+        <Nullable>enable</Nullable>
+    </PropertyGroup>
+
+    <ItemGroup>
+      <PackageReference Include="NetTopologySuite" Version="2.5.0" />
+      <PackageReference Include="NetTopologySuite.IO.Esri.Shapefile" Version="1.2.0" />
+      <PackageReference Include="NetTopologySuite.IO.PostGis" Version="2.1.0" />
+      <PackageReference Include="Newtonsoft.Json" Version="13.0.3" />
+      <PackageReference Include="Npgsql" Version="9.0.2" />
+      <PackageReference Include="Npgsql.NetTopologySuite" Version="9.0.2" />
+      <PackageReference Include="Testcontainers.PostgreSql" Version="4.1.0" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <None Update="Wards_May_2024_Boundaries_UK_BFE_-3586170638928067737\WD_MAY_2024_UK_BFC.cpg">
+        <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      </None>
+      <None Update="Wards_May_2024_Boundaries_UK_BFE_-3586170638928067737\WD_MAY_2024_UK_BFC.dbf">
+        <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      </None>
+      <None Update="Wards_May_2024_Boundaries_UK_BFE_-3586170638928067737\WD_MAY_2024_UK_BFC.prj">
+        <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      </None>
+      <None Update="Wards_May_2024_Boundaries_UK_BFE_-3586170638928067737\WD_MAY_2024_UK_BFC.shp">
+        <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      </None>
+      <None Update="Wards_May_2024_Boundaries_UK_BFE_-3586170638928067737\WD_MAY_2024_UK_BFC.shx">
+        <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      </None>
+      <None Update="Wards_May_2024_Boundaries_UK_BFE_-3586170638928067737\WD_MAY_2024_UK_BFC.shp.xml">
+        <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      </None>
+    </ItemGroup>
+
+</Project>

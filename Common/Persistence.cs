@@ -10,15 +10,8 @@ using Testcontainers.PostgreSql;
 
 namespace Common;
 
-public static class Common
+public static class Persistence
 {
-    public static async Task<PostgreSqlContainer> StartPostGisContainer()
-    {
-        var postgreSqlContainer = new PostgreSqlBuilder().WithImage("postgis/postgis:12-3.0").Build();
-        await postgreSqlContainer.StartAsync();
-        return postgreSqlContainer;
-    }
-    
     public static async Task<NpgsqlConnection> OpenDatabaseConnection(PostgreSqlContainer postgreSqlContainer)
     {
         var dataSourceBuilder = new NpgsqlDataSourceBuilder(postgreSqlContainer.GetConnectionString()).EnableDynamicJson();

@@ -13,5 +13,5 @@ using var stringReader = new StringReader(geoJson);
 await using var jsonReader = new JsonTextReader(stringReader);
 var features = serializer.Deserialize<FeatureCollection>(jsonReader);
 
-await Common.Persistence.InsertFeaturesToTable(connection, features.ToArray());
+await Common.Persistence.InsertFeaturesToTable(connection, features!.ToArray());
 await Common.Persistence.GetDataFromDatabase(connection);

@@ -6,6 +6,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PersistGeoJson", "PersistGe
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Common", "Common\Common.csproj", "{B85DCAAE-5529-430F-8684-9F6B88616598}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GdalNetCore", "GdalNetCore\GdalNetCore.csproj", "{B98471FB-03CB-49D9-81AB-4777E43E248A}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -24,5 +26,9 @@ Global
 		{B85DCAAE-5529-430F-8684-9F6B88616598}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B85DCAAE-5529-430F-8684-9F6B88616598}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B85DCAAE-5529-430F-8684-9F6B88616598}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B98471FB-03CB-49D9-81AB-4777E43E248A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B98471FB-03CB-49D9-81AB-4777E43E248A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B98471FB-03CB-49D9-81AB-4777E43E248A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B98471FB-03CB-49D9-81AB-4777E43E248A}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal

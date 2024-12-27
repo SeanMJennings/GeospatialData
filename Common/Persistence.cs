@@ -27,7 +27,7 @@ public static class Persistence
         await cmd.ExecuteNonQueryAsync();
     }
     
-    public static async Task InsertFeaturesToTable(NpgsqlConnection npgsqlConnection, IFeature[] features)
+    public static async Task InsertFeaturesToTable(NpgsqlConnection npgsqlConnection, IEnumerable<IFeature> features)
     {
         var geometryFactory = new GeometryFactory();
         await using var writer = await npgsqlConnection.BeginBinaryImportAsync("COPY data (geometry, boundary, attributes) FROM STDIN (FORMAT BINARY)");
@@ -41,7 +41,7 @@ public static class Persistence
             }
             else
             {
-                await writer.WriteAsync<Geometry>(null, NpgsqlDbType.Geometry);  
+                await writer.WriteAsync<Geometry>(null!, NpgsqlDbType.Geometry);  
             }
             await writer.WriteAsync(feature.Attributes, NpgsqlDbType.Json);
         }
